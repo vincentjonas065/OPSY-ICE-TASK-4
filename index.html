@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProjectPilot</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html"><b>P</b>ProjectPilot</a>
+    <span class="saved">● Saved just now</span>
+    <button class="avatar">VJ</button>
+  </header>
+
+  <main>
+    <aside>
+      <a class="project" href="index.html">
+        <b>PP</b>
+        <span>Research Methods<small>OPSY5121 · Group 2</small></span>
+        ⌄
+      </a>
+
+      <nav>
+        <a class="active" href="index.html">▣ Study desk</a>
+        <a href="services.html">▤ Resources</a>
+        <a href="Users.html">◉ Group workspace</a>
+      </nav>
+
+      <section class="tasks">
+        <p>PROJECT TASKS <button>＋</button></p>
+        <a href="index.html?task=q1"><i class="done">✓</i><span>Question 1<small>Completed</small></span></a>
+        <a href="index.html?task=q2"><i></i><span>Question 2<small>Due tomorrow · High priority</small></span><em>!</em></a>
+        <a href="index.html?task=q3"><i></i><span>Question 3<small>Due 18 Oct</small></span></a>
+        <a href="index.html?task=review"><i></i><span>Final review<small>Due 20 Oct</small></span></a>
+      </section>
+
+      <footer>
+        <button>⌘ K Search workspace</button>
+        <button>↶ Undo last action</button>
+      </footer>
+    </aside>
+
+    <section class="workspace">
+      <header class="workspace-header">
+        <div>
+          <p class="eyebrow">ACTIVE TASK</p>
+          <h1 id="title">Question 2 <mark id="priority">High priority</mark></h1>
+          <p id="description">Analyse the effects of digital distraction on student productivity.</p>
+        </div>
+
+        <div class="metrics">
+          <span>PROJECT PROGRESS<b id="progress">1 of 4 tasks</b><i><u></u></i><small>25% complete</small></span>
+          <span>DUE<b id="due">Tomorrow</b><small id="date">17 Oct · 23:59</small></span>
+        </div>
+      </header>
+
+      <div class="desk">
+        <article class="card editor">
+          <div class="toolbar">
+            <button><b>B</b></button>
+            <button><i>I</i></button>
+            <button>H1</button>
+            <button>☷</button>
+            <span>Draft · 284 words</span>
+          </div>
+
+          <div class="document" contenteditable="true">
+            <p id="label">QUESTION 2 · DRAFT RESPONSE</p>
+            <h2 id="heading">Digital distraction and student productivity</h2>
+            <div id="text">
+              Digital devices support research and collaboration, but constant notifications and task-switching can interrupt deep concentration. ProjectPilot keeps the question, research and writing space together in one workspace.
+            </div>
+          </div>
+
+          <footer>⌘ S to save <span>All changes saved</span></footer>
+        </article>
+
+        <aside class="card resource-panel">
+          <div class="tabs"><b>Linked resources <i>2</i></b><span>Notes <i>3</i></span></div>
+
+          <section class="pdf">
+            <header>
+              <strong>PDF</strong>
+              <span>
+                <b id="pdf">Digital-distraction-study.pdf</b>
+                <small id="pdf-info">12 pages · Linked to Question 2</small>
+              </span>
+              <button>↗</button>
+            </header>
+
+            <div class="paper">
+              <h3>Research preview</h3>
+              <p>Students who switch repeatedly between digital tools can lose focus and reduce the quality of their written work.</p>
+              <mark>Keeping research next to the active task reduces unnecessary window switching.</mark>
+            </div>
+          </section>
+
+          <section class="note">
+            <b id="author">NOTE · VINCENT</b>
+            <p id="note">Use the highlighted finding as evidence in paragraph two.</p>
+          </section>
+
+          <button class="link-button">＋ Link a resource</button>
+        </aside>
+      </div>
+
+      <div class="timer">
+        <span>● <b>Focus session</b> · Active task</span>
+        <strong>24:38</strong>
+        <button>Pause</button>
+        <button class="primary">✓ Mark task complete</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const tasks = {
+      q1: {
+        title: "Question 1", priority: "Completed",
+        description: "Explain the ProjectPilot main workspace.",
+        progress: "1 of 4 tasks", due: "Completed", date: "Submitted",
+        label: "QUESTION 1 · COMPLETED RESPONSE",
+        heading: "The ProjectPilot main workspace",
+        text: "ProjectPilot gives students one digital study desk where they can plan tasks, read research, write answers and monitor progress without switching between multiple windows.",
+        pdf: "Assignment-brief.docx",
+        pdfInfo: "General instructions · Linked to Question 1",
+        author: "NOTE · ETHAN",
+        note: "Explain how the one-screen layout reduces distraction."
+      },
+      q2: {
+        title: "Question 2", priority: "High priority",
+        description: "Analyse the effects of digital distraction on student productivity.",
+        progress: "1 of 4 tasks", due: "Tomorrow", date: "17 Oct · 23:59",
+        label: "QUESTION 2 · DRAFT RESPONSE",
+        heading: "Digital distraction and student productivity",
+        text: "Digital devices support research and collaboration, but constant notifications and task-switching can interrupt deep concentration. ProjectPilot keeps the question, research and writing space together in one workspace.",
+        pdf: "Digital-distraction-study.pdf",
+        pdfInfo: "12 pages · Linked to Question 2",
+        author: "NOTE · VINCENT",
+        note: "Use the highlighted finding as evidence in paragraph two."
+      },
+      q3: {
+        title: "Question 3", priority: "Medium priority",
+        description: "Describe how users interact with ProjectPilot.",
+        progress: "1 of 4 tasks", due: "18 October", date: "18 Oct · 23:59",
+        label: "QUESTION 3 · DRAFT RESPONSE",
+        heading: "How users interact with ProjectPilot",
+        text: "Students select a task, type in the centre area and view linked notes and resources on the right. Search, task completion and the focus timer support productive work.",
+        pdf: "Student-interaction-notes.pdf",
+        pdfInfo: "8 pages · Linked to Question 3",
+        author: "NOTE · MNQWENO",
+        note: "Mention task dragging, search and the focus timer."
+      },
+      review: {
+        title: "Final review", priority: "Not started",
+        description: "Review all work before submission.",
+        progress: "1 of 4 tasks", due: "20 October", date: "20 Oct · 23:59",
+        label: "FINAL REVIEW · CHECKLIST",
+        heading: "Final project review",
+        text: "Check that all answers are complete, resources are linked, responsibilities are clear and every marking-rubric requirement is demonstrated.",
+        pdf: "Marking-rubric.pdf",
+        pdfInfo: "2 pages · Linked to Final Review",
+        author: "NOTE · GROUP",
+        note: "Confirm every group member has completed their role."
+      }
+    };
+
+    const selected = new URLSearchParams(window.location.search).get("task") || "q2";
+    const task = tasks[selected] || tasks.q2;
+
+    document.getElementById("title").childNodes[0].nodeValue = task.title + " ";
+    document.getElementById("priority").textContent = task.priority;
+    document.getElementById("description").textContent = task.description;
+    document.getElementById("progress").textContent = task.progress;
+    document.getElementById("due").textContent = task.due;
+    document.getElementById("date").textContent = task.date;
+    document.getElementById("label").textContent = task.label;
+    document.getElementById("heading").textContent = task.heading;
+    document.getElementById("text").textContent = task.text;
+    document.getElementById("pdf").textContent = task.pdf;
+    document.getElementById("pdf-info").textContent = task.pdfInfo;
+    document.getElementById("author").textContent = task.author;
+    document.getElementById("note").textContent = task.note;
+  </script>
+</body>
+</html>
